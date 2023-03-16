@@ -1,0 +1,266 @@
+:root {
+  font-size: 62.5%;
+
+  --white: #ffffff;
+  --red: #ed3a5a;
+  --purple: #7c3aed;
+  --purple-light: #9f67ff;
+  --gray-800: #1e293b;
+  --gray-600: #475569;
+  --gray-400: #94a3b8;
+  --gray-200: #e2e8f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1216px;
+  min-height: 100vh;
+  font-size: 1.6rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7vw;
+
+  margin: 0 auto;
+}
+
+body,
+input,
+select,
+textarea {
+  font-family: "Titillium Web";
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: var(--gray-800);
+}
+
+section {
+  padding: 4.8rem 1.6rem;
+}
+
+section:first-of-type {
+  justify-self: right;
+  max-width: 624px;
+}
+
+section h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  margin-bottom: 12rem;
+}
+
+section header {
+  margin-bottom: 4rem;
+}
+
+section header h2 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 5.5rem;
+
+  margin-bottom: 1.6rem;
+}
+
+section header p {
+  color: var(--gray-600);
+}
+
+section main form {
+  max-width: 384px;
+  width: 100%;
+  margin-bottom: 3.2rem;
+}
+
+section main form .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 0.8rem;
+}
+
+section main form .header label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2.1rem;
+  color: var(--gray-800);
+}
+
+section main form .header a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2.1rem;
+  color: var(--purple);
+}
+
+section main form .input {
+  position: relative;
+  margin-bottom: 1.6rem;
+}
+
+section main form input {
+  width: 100%;
+  background: var(--white);
+
+  border: 1px solid var(--gray-200);
+  border-radius: 4px;
+
+  padding: 1.6rem 1.2rem;
+}
+
+section main form input:invalid {
+  outline: none;
+  border-color: var(--red);
+}
+
+section main form input:hover,
+section main form input:focus {
+  outline: none;
+  border-color: var(--purple);
+}
+
+section main form input::placeholder {
+  color: var(--gray-400);
+}
+
+section main form input:disabled {
+  opacity: 0.35;
+}
+
+section main form input:disabled::placeholder {
+  color: #1E293B;
+}
+
+section main form input:disabled:hover {
+  outline: none;
+  border-color: var(--gray-200);
+}
+
+section main form input::-ms-reveal {
+  display: none;
+}
+
+section main form .input p {
+  display: none;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: var(--red);
+
+  margin-top: 0.4rem;
+}
+
+section main form .input input:invalid:not(:focus) + p {
+  display: initial;
+}
+
+#showHidden {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.2rem;
+
+  width: fit-content;
+  background: transparent;
+  border: 0;
+  outline: none;
+
+  padding: 0.25rem;
+  margin: 0;
+}
+
+#showHidden img {
+  width: 2rem;
+  height: 2rem;
+}
+
+section main form button {
+  width: 100%;
+  background: var(--purple);
+
+  font-weight: 700;
+  color: var(--white);
+
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+
+  padding: 16px 24px;
+  margin-top: 1.6rem;
+}
+
+section footer p {
+  color: var(--gray-600);
+}
+
+section footer p a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+section footer p a:focus,
+section footer p a:hover {
+  text-decoration: underline;
+}
+
+section main form button:focus,
+section main form button:hover {
+  background: var(--purple-light);
+}
+
+.bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bg:after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: calc(50vw - 3.5vw);
+  height: 100%;
+
+  background: url(./assets/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 1023px) {
+  body {
+    display: grid;
+    align-items: start;
+    justify-content: center;
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 3.2rem 1.6rem;
+    margin: 0 auto;
+  }
+
+  section:first-of-type {
+  justify-self: initial;
+  max-width: 384px;
+  width: 100%;
+}
+
+  .bg {
+    display: none;
+  }
+}

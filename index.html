@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vertigo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <h1>
+        <img src="./assets/logo.svg" alt="Logo Vertigo" />
+        Vertigo
+      </h1>
+      <article>
+        <header>
+          <h2>Acesse a plataforma</h2>
+          <p>
+            Faça login ou registre-se para começar a construir seus projetos
+            ainda hoje.
+          </p>
+        </header>
+
+        <main>
+          <form>
+            <div class="header">
+              <label for="email">Email</label>
+            </div>
+            <div class="input">
+              <input
+                type="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+              />
+              <p>Digite um e-mail válido</p>
+            </div>
+
+            <div class="header">
+              <label for="password">Senha</label>
+              <a href="#">Esqueceu a senha?</a>
+            </div>
+            <div class="input">
+              <input
+                type="password"
+                name="password"
+                placeholder="Digite sua senha"
+              />
+              <button type="button" id="showHidden">
+                <img src="./assets/eye-off.svg" />
+              </button>
+            </div>
+
+            <button type="button">Entrar</button>
+          </form>
+        </main>
+
+        <footer>
+          <p>Ainda não tem uma conta? <a href="#">Inscreva-se</a></p>
+        </footer>
+      </article>
+    </section>
+
+    <section class="bg"></section>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
